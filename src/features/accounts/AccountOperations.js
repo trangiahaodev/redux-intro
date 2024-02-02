@@ -22,7 +22,7 @@ function AccountOperations() {
     if (!depositAmount) return;
     dispatch(deposit(depositAmount, currency));
     setDepositAmount("");
-    setCurrency("");
+    setCurrency("USD");
   }
 
   function handleWithdrawal() {
@@ -55,7 +55,8 @@ function AccountOperations() {
           />
           <select
             value={currency}
-            onChange={(e) => setCurrency(e.target.value)}>
+            onChange={(e) => setCurrency(e.target.value)}
+          >
             <option value="USD">US Dollar</option>
             <option value="EUR">Euro</option>
             <option value="GBP">British Pound</option>
